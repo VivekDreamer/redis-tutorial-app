@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import com.example.vivek.springbootredistutorialapp.model.Product;
 import com.example.vivek.springbootredistutorialapp.service.ProductService;
 
+//we can seperate service logic and repository logic
 @Service
 public class ProductServiceImpl implements ProductService{
     
