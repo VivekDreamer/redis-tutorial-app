@@ -69,4 +69,10 @@ public class ProductServiceImpl implements ProductService{
         redisTemplate.opsForHash().delete(HASH_KEY,id);
         return "product deleted";
     }
+
+    @Override
+    @CacheEvict(value = "Product", allEntries = true)
+    public void clearAllData() {
+        //this method will remove all the data from cache name "Product"
+    }
 }
