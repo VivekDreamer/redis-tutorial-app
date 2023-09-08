@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.vivek.springbootredistutorialapp.model.Product;
 import com.example.vivek.springbootredistutorialapp.service.ProductService;
 
+
 @RestController
 @RequestMapping("/product")
 public class ProductController {
@@ -46,4 +47,10 @@ public class ProductController {
         return ResponseEntity.ok(deleteProduct);
     }
 
+    @GetMapping(value="/clear")
+    public String getMethodName() {
+        productService.clearAllData();
+        return "cache cleared!";
+    }
+    
 }
